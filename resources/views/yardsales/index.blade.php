@@ -3,12 +3,12 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-md-offset-2">
+            <div class="">
                 <div class="panel panel-default">
                     <div class="panel-heading">Deltona Yard Sale listings
-                        <button type="button" class="btn btn-primary btn-xs pull-right"><a href="/yard-sales/create"
-                                                                                           style="color: #ffffff;">Add
-                                New Listing</a></button>
+                        <button type="button" class="btn btn-primary btn-xs pull-right">
+                            <a href="/yard-sales/create" style="color: #ffffff;">Add New Listing</a>
+                        </button>
                     </div>
 
                     <div class="panel-body">
@@ -28,6 +28,7 @@
                                     <th style="white-space: nowrap">Display on map</th>
                                     <th>Description</th>
                                     <th>Time</th>
+                                    <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -44,6 +45,11 @@
                                         <td>{{ $yardSale->display_on_map }}</td>
                                         <td>{{ $yardSale->description }}</td>
                                         <td>{{ $yardSale->time }}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-xs pull-right">
+                                                <a href="/yard-sales/{{$yardSale->id}}" style="color: #ffffff;">View</a>
+                                            </button>
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
