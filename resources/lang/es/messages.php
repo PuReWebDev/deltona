@@ -3,5 +3,5 @@
  * Translation file for the Spanish language
  */
 return [
-    'welcome' => 'Welcome to our application',
+    'welcome' => 'Bienvenido a nuestra página web',
 ];

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\YardSale;
+use Illuminate\Support\Facades\App;
 
 class YardSaleController extends Controller
 {
@@ -13,9 +15,11 @@ class YardSaleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(YardSale $yardSale)
     {
-        //
+//        $yardSale = $yardSale->findAll();
+//        App::setLocale('es');
+        return view('yardsales.index', ['yardSales' => app(YardSale::class)->all()]);
     }
 
     /**
@@ -25,7 +29,7 @@ class YardSaleController extends Controller
      */
     public function create()
     {
-        //
+        return view('yardsales.create');
     }
 
     /**
