@@ -40,7 +40,12 @@ class YardSaleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->isMethod('post')) {
+            /** @var object $yardSaleModel */
+            $yardSaleModel = app(YardSale::class)->create($request->all());
+
+            return redirect()->action('YardSaleController@show', ['id' => $yardSaleModel->id]);
+        }
     }
 
     /**
