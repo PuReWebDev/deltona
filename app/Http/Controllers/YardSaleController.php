@@ -71,7 +71,7 @@ class YardSaleController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('yardsales.edit', ['yardSale' => app(YardSale::class)->findOrFail($id)]);
     }
 
     /**
@@ -84,7 +84,8 @@ class YardSaleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return redirect()->action('YardSaleController@show',
+            ['id' => app(YardSale::class)->where('id', $id)->update($request->all())->id]);
     }
 
     /**
