@@ -21,10 +21,10 @@
                                     <th>City</th>
                                     <th>Zip</th>
                                     <th>Privacy</th>
-                                    <th style="white-space: nowrap">Type of sale</th>
+                                    <th style="white-space: nowrap">Sale Type</th>
                                     <th>Start date</th>
                                     <th>End date</th>
-                                    <th style="white-space: nowrap">Payment types accepted</th>
+                                    <th style="white-space: nowrap">Payment Accepted</th>
                                     <th style="white-space: nowrap">Display on map</th>
                                     <th>Description</th>
                                     <th>Time</th>
